@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+:root {
+  --background: #040d09;
+  --foreground: #f0fdf4;
+  --card: #081e17;
+  --card-border: #133e31;
+  --accent-emerald: #10b981;
+  --accent-mint: #34d399;
+  --accent-neon: #00f59b;
+  --accent-cyan: #06b6d4;
+  --accent-orange: #f59e0b;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar for cyber emerald dark theme */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #040d09;
+}
+::-webkit-scrollbar-thumb {
+  background: #133e31;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #10b981;
+}
+
+/* Glassmorphism helpers in Cyber Emerald */
+.glass-panel {
+  background: rgba(8, 30, 23, 0.75);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.glass-card {
+  background: rgba(9, 32, 25, 0.85);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  transition: all 0.25s ease;
+}
+
+.glass-card:hover {
+  border-color: rgba(52, 211, 153, 0.5);
+  box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.15);
+}
+
+.glow-emerald {
+  box-shadow: 0 0 25px rgba(16, 185, 129, 0.35);
+}
+
+.glow-mint {
+  box-shadow: 0 0 25px rgba(52, 211, 153, 0.35);
+}
+
+/* Leaflet tile guarantee & crisp rendering */
+.leaflet-container {
+  width: 100% !important;
+  height: 100% !important;
+  background: #061510 !important;
+  font-family: inherit !important;
+}
+
+.leaflet-tile {
+  filter: brightness(0.95) contrast(1.05);
+}
+
+.leaflet-popup-content-wrapper {
+  background: #081e17 !important;
+  color: #f0fdf4 !important;
+  border: 1px solid rgba(16, 185, 129, 0.35) !important;
+  border-radius: 14px !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6) !important;
+}
+
+.leaflet-popup-tip {
+  background: #081e17 !important;
+}
